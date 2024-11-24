@@ -2,7 +2,7 @@ import { createStore } from 'vuex';
 
 export default createStore({
     state: {
-        posts: [
+      posts: JSON.parse(localStorage.getItem('posts')) || [
       {
         userId: 1,
         id: 1,
@@ -108,10 +108,12 @@ export default createStore({
             const post = state.posts.find(p => p.id === postId);
             if (post) {
               post.likes++;
+              localStorage.setItem('posts', JSON.stringify(state.posts));
             }
         },
         resetLikes(state) {
             state.posts.forEach(post => (post.likes = 0));
+            localStorage.setItem('posts', JSON.stringify(state.posts));
         },
     },
     actions: {
