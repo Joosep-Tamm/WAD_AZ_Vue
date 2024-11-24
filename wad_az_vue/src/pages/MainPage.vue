@@ -12,7 +12,9 @@
         <span class="like-count">{{ post.likes }} Likes</span>
       </div>
     </div>
-    <button @click="resetLikes" class="reset-button">Reset All Likes</button>
+    <div class="reset-button-wrapper">
+      <button @click="resetLikes" class="reset-button">Reset All Likes</button>
+    </div>
   </div>
 </template>
 

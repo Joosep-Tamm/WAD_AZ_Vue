@@ -1,6 +1,6 @@
 <template>
   <footer class="app-footer">
-    <p>Footer</p>
+    <p>&copy; 2024 The Best Social Media Platform Ever. All rights reserved.</p>
   </footer>
 </template>
 
@@ -16,8 +16,6 @@ export default {
   padding: 1rem;
   background-color: #333;
   color: white;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
+
 </style>
