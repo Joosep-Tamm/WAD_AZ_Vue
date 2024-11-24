@@ -1,20 +1,11 @@
 <template>
-    <div class="form-wrapper">
+    <div>
         <form @submit.prevent="validatePassword">
-            <div class="side-by-side">
-                <p class="form-label">Username</p>
-                <input class= "form-input" v-model="username" type="text" placeholder="Username" required />
-            </div>
-            
-            <div class="side-by-side">
-                <p class="form-label">Password</p>
-                <input class= "form-input" v-model="password" type="password" placeholder="Password" required />
-            </div>
-            <button class= "submit-button" type="submit">Sign Up</button>
+            <input v-model="username" type="text" placeholder="Username" required />
+            <input v-model="password" type="password" placeholder="Password" required />
+            <button type="submit">Sign Up</button>
         </form>
-        <p class="error" v-if="error">{{ error }}</p>
-    </div>
-    <div class="empty-space">
+        <p v-if="error">{{ error }}</p>
     </div>
 </template>
 

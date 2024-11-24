@@ -106,19 +106,21 @@ export default createStore({
     mutations: {
         incrementLikes(state, postId) {
             const post = state.posts.find(p => p.id === postId);
-            if (post) post.likes++;
+            if (post) {
+              post.likes++;
+            }
         },
         resetLikes(state) {
             state.posts.forEach(post => (post.likes = 0));
         },
     },
     actions: {
-        incrementLikes({ commit }, postId) {
-            commit('incrementLikes', postId);
-        },
-        resetLikes({ commit }) {
-            commit('resetLikes');
-        },
+      incrementLikes: (act, { postId }) => {
+        act.commit('incrementLikes', postId);
+      },
+      resetLikes: act => {
+          act.commit('resetLikes');
+      },
     },
     getters: {
         allPosts: state => state.posts,
