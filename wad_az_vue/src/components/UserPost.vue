@@ -16,7 +16,20 @@
 <script>
 export default {
   props: {
-    post: Object
+  postId: Number
+  },
+  computed: {
+    posts() {
+      return this.$store.getters.allPosts;
+    },
+    post() {
+      for (const p of this.posts) {
+        if (p.id === this.postId) {
+          return p;
+        }
+      }
+      return null;
+    }
   },
   methods: {
     likePost() {

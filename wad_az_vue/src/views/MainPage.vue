@@ -1,7 +1,7 @@
 <template>
   <div class="main-page">
     <div v-for="post in posts" :key="post.id" class="post-card">
-      <UserPost :post="post"/>
+      <UserPost :postId="post.id"/>
     </div>
     <button @click="resetLikes" class="reset-button">Reset All Likes</button>
   </div>
