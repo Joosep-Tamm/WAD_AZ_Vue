@@ -37,16 +37,16 @@ body {
 
 .post img {
     max-width: 100%;
-    display:block;
+    display: block;
     margin-left: auto;
     margin-right: auto;
     height: auto;
 }
 
 .post-card img {
-    max-width: 100%;  
-    height: auto;     
-  }
+    max-width: 95%;  
+    height: auto;   
+}
 
 
 .post-card {
@@ -59,10 +59,11 @@ body {
     border-width: 1px;  
     border-style: solid;  
     border-color: #e0e0e0;  
+    
 }
 
-.post-card > * {
-    margin-left: 10px; 
+.post-card > *:not(.post-footer) {
+    margin-left: 10px;
 }
 
 
