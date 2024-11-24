@@ -5,7 +5,7 @@
                 <p class="form-label">Username</p>
                 <input class="form-input" v-model="username" type="text" placeholder="Username" required />
             </div>
-            
+
             <div class="side-by-side">
                 <p class="form-label">Password</p>
                 <input class="form-input" v-model="password" type="password" placeholder="Password" required />
@@ -120,5 +120,9 @@ form {
     text-align: center;
     margin-top: 10px;
     max-width: 320px;
+}
+
+.empty-space {
+    flex: 1;
 }
 </style>

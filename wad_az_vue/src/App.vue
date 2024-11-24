@@ -9,7 +9,6 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import AppFooter from './components/AppFooter.vue';
-import './css/style.css';
 
 export default {
   components: {
@@ -30,5 +29,23 @@ export default {
   padding: 0;
   background-color: #f4f4f4;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%; 
+  max-width: 850px;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: rgb(80, 80, 80);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
 }
 </style>
